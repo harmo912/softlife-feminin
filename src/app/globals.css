@@ -1,0 +1,114 @@
+/* src/app/globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --rose: #C8526A;
+  --rose-light: #e87a92;
+  --rose-pale: #f5d0d8;
+  --rose-dark: #9e3a50;
+  --creme: #FDF8F5;
+  --encre: #2A1A1E;
+  --or: #C4963A;
+  --or-light: #e8b85a;
+  --gris: #8a7a7e;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--creme);
+  color: var(--encre);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typography helpers */
+.font-display {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--creme); }
+::-webkit-scrollbar-thumb { background: var(--rose-pale); border-radius: 2px; }
+
+/* Selection */
+::selection { background: var(--rose-pale); color: var(--encre); }
+
+/* Focus ring */
+:focus-visible {
+  outline: 2px solid var(--rose);
+  outline-offset: 2px;
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-fade-up  { animation: fadeUp 0.6s ease forwards; }
+.animate-fade-in  { animation: fadeIn 0.4s ease forwards; }
+
+/* Skeleton loader */
+.skeleton {
+  background: linear-gradient(90deg, #f0e8e8 25%, #f8f0f0 50%, #f0e8e8 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 4px;
+}
+
+/* Prose for blog */
+.prose-softlife h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: var(--encre);
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose-softlife h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--encre);
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.prose-softlife p {
+  color: #5a4a4e;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.prose-softlife strong { color: var(--encre); font-weight: 600; }
+
+.prose-softlife ol,
+.prose-softlife ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.prose-softlife li {
+  color: #5a4a4e;
+  line-height: 1.8;
+  margin-bottom: 0.25rem;
+}

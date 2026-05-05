@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2A1A1E"/>
+      <stop offset="100%" style="stop-color:#3d2028"/>
+    </linearGradient>
+    <linearGradient id="petal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#C8526A"/>
+      <stop offset="100%" style="stop-color:#e87a92"/>
+    </linearGradient>
+  </defs>
+  <!-- Fond rond -->
+  <circle cx="32" cy="32" r="32" fill="url(#bg)"/>
+  <!-- Pétale gauche -->
+  <ellipse cx="22" cy="28" rx="9" ry="14" fill="url(#petal)" opacity="0.9" transform="rotate(-20 22 28)"/>
+  <!-- Pétale droit -->
+  <ellipse cx="42" cy="28" rx="9" ry="14" fill="url(#petal)" opacity="0.9" transform="rotate(20 42 28)"/>
+  <!-- Pétale bas gauche -->
+  <ellipse cx="24" cy="42" rx="8" ry="12" fill="#C8526A" opacity="0.7" transform="rotate(20 24 42)"/>
+  <!-- Pétale bas droit -->
+  <ellipse cx="40" cy="42" rx="8" ry="12" fill="#C8526A" opacity="0.7" transform="rotate(-20 40 42)"/>
+  <!-- Centre doré -->
+  <circle cx="32" cy="32" r="7" fill="#C4963A"/>
+  <circle cx="32" cy="32" r="4" fill="#e8b85a"/>
+  <!-- Lettre S -->
+  <text x="32" y="36.5" font-family="Georgia,serif" font-size="9" font-weight="bold" fill="#2A1A1E" text-anchor="middle">S</text>
+</svg>
