@@ -25,20 +25,19 @@ export default function BlogPostPage({ params }: Props) {
 
   // Convertir markdown basique en HTML
   function renderContent(md: string) {
-    return md
-      .replace(/^## (.+)$/gm, '<h2>$1</h2>')
-      .replace(/^### (.+)$/gm, '<h3>$1</h3>')
-      .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
-      .replace(/^(\d+\.\s.+)$/gm, '<li>$1</li>')
-      .replace(/(<li>.*<\/li>)/s, '<ol>$1</ol>')
-      .split('\n\n')
-      .map((block) =>
-        block.startsWith('<h') || block.startsWith('<ol') || block.startsWith('<li')
-          ? block
-          : `<p>${block.replace(/\n/g, '<br/>')}</p>`
-      )
-      .join('\n')
-  }
+  return md
+    .replace(/^## (.+)$/gm, '<h2>$1</h2>')
+    .replace(/^### (.+)$/gm, '<h3>$1</h3>')
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    .replace(/^(\d+\.\s.+)$/gm, '<li>$1</li>')
+    .split('\n\n')
+    .map((block) =>
+      block.startsWith('<h') || block.startsWith('<li')
+        ? block
+        : `<p>${block.replace(/\n/g, '<br/>')}</p>`
+    )
+    .join('\n')
+}
 
   return (
     <div className="max-w-4xl mx-auto px-6 py-16">
